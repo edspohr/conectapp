@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectApp - Apoyo 24/7 para padres de niños con TEA</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Aplicar la fuente Inter a todo el cuerpo del documento */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para un scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ===== Header ===== -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Placeholder para el Logo -->
+            <div class="text-2xl font-bold text-blue-600">
+                ConectApp
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#como-funciona" class="text-gray-600 hover:text-blue-600 transition-colors">Cómo Funciona</a>
+                <a href="#profesionales" class="text-gray-600 hover:text-blue-600 transition-colors">Profesionales</a>
+                <a href="#precios" class="text-gray-600 hover:text-blue-600 transition-colors">Precios</a>
+            </nav>
+            <a href="#precios" class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105">
+                Prueba Ahora
+            </a>
+        </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main>
+
+        <!-- ===== Hero Section (Actualizada) ===== -->
+        <section class="bg-gradient-to-br from-blue-50 via-gray-50 to-white">
+            <div class="container mx-auto px-6 pt-20 pb-12 md:pt-32 md:pb-20">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Columna de Texto -->
+                    <div class="text-center md:text-left">
+                        <span class="text-blue-600 font-semibold tracking-wide uppercase">Acompañamiento inteligente para ti</span>
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mt-4 mb-6 leading-tight">
+                            Apoyo 24/7 en WhatsApp para padres de niños con TEA
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-600 mb-8">
+                            Recibe orientación experta y personalizada de nuestro agente IA, en cualquier momento y lugar, directamente en tu celular.
+                        </p>
+                        <div class="flex justify-center md:justify-start items-center gap-4">
+                            <a href="#precios" class="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105 animate-pulse">
+                                Prueba 7 Días Gratis
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Columna Visual (Simulación de Teléfono) -->
+                    <div class="hidden md:flex justify-center items-center">
+                        <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+                            <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                            <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                            <div class="rounded-[2rem] overflow-hidden w-full h-full bg-white">
+                                <!-- Contenido de la pantalla -->
+                                <div class="bg-gray-100 h-full flex flex-col">
+                                    <div class="bg-blue-500 text-white p-3 flex items-center shadow-md">
+                                        <div class="w-10 h-10 bg-white rounded-full mr-3 flex items-center justify-center text-blue-500 font-bold">C</div>
+                                        <div>
+                                            <h2 class="font-semibold">ConectApp IA</h2>
+                                            <p class="text-xs text-blue-100">en línea</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow p-4 space-y-4 overflow-y-auto">
+                                        <div class="flex justify-start">
+                                            <div class="bg-white p-3 rounded-lg max-w-xs shadow">
+                                                <p class="text-sm">¡Hola! Soy tu agente de ConectApp, listo para ayudarte. ¿Cómo podemos empezar hoy?</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-end">
+                                            <div class="bg-blue-100 p-3 rounded-lg max-w-xs shadow">
+                                                <p class="text-sm">Mi hijo ha tenido problemas para dormir últimamente. ¿Alguna sugerencia?</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-start">
+                                            <div class="bg-white p-3 rounded-lg max-w-xs shadow">
+                                                <p class="text-sm">Entiendo, es un desafío común. Basado en su perfil, podríamos intentar establecer una rutina de relajación 30 minutos antes de acostarse. ¿Te gustaría explorar algunas técnicas?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholder para el Video -->
+        <section class="container mx-auto px-6 py-16 text-center">
+            <div class="max-w-4xl mx-auto">
+                 <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-2xl shadow-2xl flex items-center justify-center">
+                    <p class="text-gray-500">[Aquí va tu video explicativo]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Frase de Impacto ===== -->
+        <section class="bg-blue-50">
+            <div class="container mx-auto px-6 py-16 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-900 max-w-3xl mx-auto italic">
+                    "¿Te has despertado a las 4 AM sin saber cómo ayudar a tu hija o hijo? Ahí es cuando ConectApp podrá acompañarte."
+                </h2>
+            </div>
+        </section>
+
+        <!-- ===== Cómo Funciona Section ===== -->
+        <section id="como-funciona" class="container mx-auto px-6 py-20 md:py-28">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Un apoyo tan simple como enviar un mensaje</h2>
+                <p class="text-lg text-gray-600 mt-4">En solo tres pasos, tendrás un asistente personal para el día a día.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10 text-center">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Crea el Perfil Clínico</h3>
+                    <p class="text-gray-600">Completa un formulario seguro para que ConectApp conozca las necesidades únicas de tu hijo/a.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Conecta por WhatsApp</h3>
+                    <p class="text-gray-600">Recibe un saludo de nuestro agente IA y comienza a conversar de forma natural e intuitiva.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Recibe Apoyo Continuo</h3>
+                    <p class="text-gray-600">Obtén sugerencias y respuestas personalizadas 24/7, basadas en su perfil y conversaciones.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Profesionales Section ===== -->
+        <section id="profesionales" class="bg-white">
+            <div class="container mx-auto px-6 py-20 md:py-28">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-blue-600 font-semibold tracking-wide uppercase">Tranquilidad y Confianza</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Diseñado por un equipo de especialistas en salud</h2>
+                        <p class="text-lg text-gray-600 mt-6">
+                            Todo el contenido y las sugerencias de ConectApp son creados y validados por un equipo multidisciplinario de Terapeutas Ocupacionales, Psicopedagogas, Psicólogos, Neurólogos y Nutricionistas para darte la tranquilidad que mereces.
+                        </p>
+                        <p class="mt-6 text-sm text-gray-500">
+                            <strong>Importante:</strong> El uso de ConectApp es complementario al apoyo terapéutico profesional y en ningún caso lo reemplaza.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-blue-50 p-4 rounded-lg"><p class="font-medium text-blue-800">Terapeutas Ocupacionales</p></div>
+                        <div class="bg-blue-50 p-4 rounded-lg"><p class="font-medium text-blue-800">Psicopedagogas</p></div>
+                        <div class="bg-blue-50 p-4 rounded-lg"><p class="font-medium text-blue-800">Psicólogos</p></div>
+                        <div class="bg-blue-50 p-4 rounded-lg"><p class="font-medium text-blue-800">Neurólogos</p></div>
+                        <div class="bg-blue-50 p-4 rounded-lg col-span-2"><p class="font-medium text-blue-800">Nutricionistas</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Precios Section ===== -->
+        <section id="precios" class="container mx-auto px-6 py-20 md:py-28">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Un plan simple y accesible</h2>
+                <p class="text-lg text-gray-600 mt-4">Prueba todas las funcionalidades sin compromiso. Queremos que sientas el apoyo desde el primer día.</p>
+            </div>
+            <div class="max-w-md mx-auto bg-white rounded-2xl shadow-2xl border border-blue-200 overflow-hidden">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-center text-gray-900">Membresía ConectApp</h3>
+                    <p class="text-center text-gray-500 mt-2">Acceso completo a tu agente IA.</p>
+                    <div class="text-center my-8">
+                        <span class="text-5xl font-extrabold text-gray-900">USD $6</span>
+                        <span class="text-gray-500 font-medium">/ mes</span>
+                    </div>
+                    <p class="text-center text-gray-600 font-medium">o CLP $6.000 / mes</p>
+                </div>
+                <div class="bg-blue-50 p-8">
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700"><strong>7 días de prueba gratuita</strong></span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700">Agente IA disponible 24/7</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700">Conversaciones ilimitadas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700">Cancela en cualquier momento</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="mt-8 block w-full bg-blue-600 text-white text-center font-bold py-4 rounded-xl shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+                        Comenzar mi Prueba Gratuita
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p class="text-2xl font-bold">ConectApp</p>
+            <p class="mt-4 text-gray-400">Acompañamiento y apoyo, siempre a tu lado.</p>
+            <div class="mt-6">
+                <a href="#" class="text-gray-400 hover:text-white mx-3">Términos de Servicio</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-3">Política de Privacidad</a>
+            </div>
+            <p class="text-sm text-gray-500 mt-8">&copy; 2024 ConectApp. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== WhatsApp Floating Button ===== -->
+    <a href="https://wa.me/TUNUMERODEWHATSAPP?text=Hola,%20quisiera%20hacer%20una%20consulta%20sobre%20ConectApp" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110 flex items-center justify-center">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.001 2.003C5.586 2.003 2 5.59 2 10.004c0 1.522.42 2.953 1.17 4.204l-1.11 4.053 4.148-1.084a7.943 7.943 0 003.793.96h.002c4.414 0 8-3.586 8-8.001S14.416 2.003 10.001 2.003zm0 14.592c-1.334 0-2.61-.33-3.75-1.002l-.268-.158-2.79 1.19.73-2.723-.173-.284A6.58 6.58 0 013.5 10.004c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.501 6.5z"></path></svg>
+    </a>
+
+</body>
+</html>
