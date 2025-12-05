@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConectApp - Tu copiloto experto en crianza neurodivergente</title>
     
+    <title>ConectApp - Tu copiloto experto en crianza neurodivergente</title>
+    <meta name="description" content="Recibe orientación experta, contención emocional y estrategias personalizadas para la crianza de niños neurodivergentes (TEA, TDAH). Disponible 24/7.">
+    <meta name="keywords" content="neurodivergencia, TEA, autismo, TDAH, crianza respetuosa, apoyo padres, terapia ocupacional, fonoaudiología, IA salud">
+    <meta name="author" content="ConectApp">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://usuarios.conectapp.me/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://usuarios.conectapp.me/">
+    <meta property="og:title" content="ConectApp | Experto en crianza neurodivergente 24/7">
+    <meta property="og:description" content="Tu copiloto para la crianza. Estrategias validadas por especialistas directo en tu bolsillo. Prueba gratis 30 días.">
+    <meta property="og:image" content="https://usuarios.conectapp.me/img/og-image.png">
+    <meta property="og:locale" content="es_CL">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ConectApp | Apoyo experto en neurodivergencia">
+    <meta name="twitter:description" content="Acompañamiento inteligente para familias neurodivergentes. Accesible, empático y profesional.">
+    <meta name="twitter:image" content="https://usuarios.conectapp.me/img/og-image.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -15,6 +33,9 @@
                     },
                     boxShadow: {
                         'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
+                    },
+                    screens: {
+                        'xs': '375px', // Breakpoint extra para móviles muy pequeños
                     }
                 }
             }
@@ -53,36 +74,36 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
 
-    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
-        <div class="container mx-auto px-6 py-4">
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
-                <a href="#" class="flex-shrink-0 hover:opacity-80 transition-opacity">
-                    <img src="img/logo.png" alt="Logo de ConectApp" class="h-10 w-auto md:h-12">
+                <a href="#" class="flex-shrink-0 hover:opacity-80 transition-opacity" aria-label="Ir al inicio">
+                    <img src="img/logo.png" alt="ConectApp Logo" class="h-12 md:h-20 w-auto object-contain transition-all duration-300">
                 </a>
 
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium" aria-label="Navegación principal">
                     <a href="#como-funciona" class="text-slate-600 hover:text-blue-600 transition-colors">Cómo Funciona</a>
                     <a href="#profesionales" class="text-slate-600 hover:text-blue-600 transition-colors">Profesionales</a>
                     <a href="#precios" class="text-slate-600 hover:text-blue-600 transition-colors">Precios</a>
-                    <a href="https://usuarios.conectapp.me/" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    <a href="https://usuarios.conectapp.me/" class="bg-blue-600 text-white px-6 py-2.5 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
                         Ingresar
                     </a>
                 </nav>
 
-                <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2 rounded-md hover:bg-slate-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2 rounded-md hover:bg-slate-100" aria-label="Abrir menú">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
 
-            <div id="mobile-menu" class="md:hidden flex flex-col space-y-4 pt-4 pb-2 border-t border-slate-100 mt-4">
-                <a href="#como-funciona" class="text-slate-600 hover:text-blue-600 font-medium block px-2" onclick="toggleMenu()">Cómo Funciona</a>
-                <a href="#profesionales" class="text-slate-600 hover:text-blue-600 font-medium block px-2" onclick="toggleMenu()">Profesionales</a>
-                <a href="#precios" class="text-slate-600 hover:text-blue-600 font-medium block px-2" onclick="toggleMenu()">Precios</a>
-                <a href="https://usuarios.conectapp.me/" class="bg-blue-600 text-white px-5 py-3 rounded-lg text-center font-bold shadow-sm block mx-2">
+            <div id="mobile-menu" class="md:hidden flex flex-col space-y-2 bg-white border-t border-slate-100 shadow-lg absolute left-0 right-0 top-full px-6 py-4">
+                <a href="#como-funciona" class="text-slate-600 hover:text-blue-600 font-medium block py-3 border-b border-slate-50" onclick="toggleMenu()">Cómo Funciona</a>
+                <a href="#profesionales" class="text-slate-600 hover:text-blue-600 font-medium block py-3 border-b border-slate-50" onclick="toggleMenu()">Profesionales</a>
+                <a href="#precios" class="text-slate-600 hover:text-blue-600 font-medium block py-3" onclick="toggleMenu()">Precios</a>
+                <a href="https://usuarios.conectapp.me/" class="bg-blue-600 text-white py-3.5 rounded-lg text-center font-bold shadow-md mt-4 block">
                     Ingresar a la App
                 </a>
             </div>
@@ -91,42 +112,42 @@
 
     <main>
 
-        <section class="bg-gradient-to-b from-blue-50/50 via-white to-white overflow-hidden">
-            <div class="container mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
-                <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <section class="bg-gradient-to-b from-blue-50/50 via-white to-white overflow-hidden relative">
+            <div class="container mx-auto px-6 pt-10 pb-16 md:pt-20 md:pb-28">
+                <div class="grid md:grid-cols-2 gap-10 lg:gap-20 items-center">
                     
-                    <div class="text-center md:text-left max-w-2xl mx-auto md:mx-0">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/50 text-blue-700 text-xs font-bold tracking-wide uppercase mb-6 border border-blue-100">
+                    <div class="text-center md:text-left max-w-2xl mx-auto md:mx-0 order-2 md:order-1">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/50 text-blue-700 text-[10px] md:text-xs font-bold tracking-wide uppercase mb-4 md:mb-6 border border-blue-100">
                             <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
                             Disponible Ahora
                         </div>
-                        <h1 class="text-4xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.15] tracking-tight">
+                        <h1 class="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-slate-900 mb-4 md:mb-6 leading-tight md:leading-[1.15] tracking-tight">
                             Tu copiloto experto en crianza <span class="text-blue-600">neurodivergente</span>
                         </h1>
-                        <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
+                        <p class="text-base md:text-xl text-slate-600 mb-6 md:mb-8 leading-relaxed px-2 md:px-0">
                             Recibe orientación experta, contención y estrategias personalizadas de nuestra IA, disponibles 24/7 directamente en tu bolsillo.
                         </p>
-                        <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
+                        <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 w-full">
                             <a href="https://usuarios.conectapp.me/" class="w-full sm:w-auto bg-blue-600 text-white font-bold px-8 py-4 rounded-xl shadow-blue-200 shadow-xl hover:bg-blue-700 hover:shadow-2xl transition-all transform hover:-translate-y-1 text-center">
                                 Comenzar Gratis
                             </a>
-                            <p class="text-sm text-slate-400 mt-2 sm:mt-0">30 días de prueba sin costo.</p>
+                            <p class="text-xs md:text-sm text-slate-400 mt-2 sm:mt-0">30 días de prueba sin costo.</p>
                         </div>
                     </div>
 
-                    <div class="relative flex justify-center items-center mt-10 md:mt-0">
-                        <div class="absolute -z-10 bg-blue-100 rounded-full w-[300px] h-[300px] md:w-[500px] md:h-[500px] blur-3xl opacity-50"></div>
+                    <div class="relative flex justify-center items-center mt-6 md:mt-0 order-1 md:order-2">
+                        <div class="absolute -z-10 bg-blue-100 rounded-full w-[280px] h-[280px] md:w-[500px] md:h-[500px] blur-3xl opacity-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
                         
-                        <div class="relative mx-auto border-slate-900 bg-slate-900 border-[12px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl shadow-slate-300">
-                            <div class="w-[120px] h-[18px] bg-slate-900 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute z-20"></div>
-                            <div class="rounded-[2rem] overflow-hidden w-full h-full bg-white flex flex-col relative z-10">
-                                <div class="bg-white/90 backdrop-blur-sm border-b border-slate-100 p-4 pt-8 sticky top-0 z-10 flex items-center justify-between shadow-sm">
+                        <div class="relative mx-auto border-slate-900 bg-slate-900 border-[10px] md:border-[12px] rounded-[2rem] md:rounded-[2.5rem] h-[500px] w-[260px] md:h-[600px] md:w-[300px] shadow-2xl shadow-slate-300 transform scale-100 hover:scale-[1.02] transition-transform duration-500">
+                            <div class="w-[100px] md:w-[120px] h-[15px] md:h-[18px] bg-slate-900 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute z-20"></div>
+                            <div class="rounded-[1.5rem] md:rounded-[2rem] overflow-hidden w-full h-full bg-white flex flex-col relative z-10">
+                                <div class="bg-white/90 backdrop-blur-sm border-b border-slate-100 p-3 md:p-4 pt-6 md:pt-8 sticky top-0 z-10 flex items-center justify-between shadow-sm">
                                     <div class="flex items-center gap-3">
-                                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                                         </div>
                                         <div>
-                                            <h3 class="font-bold text-slate-800 text-sm">ConectApp</h3>
+                                            <h3 class="font-bold text-slate-800 text-xs md:text-sm">ConectApp</h3>
                                             <p class="text-[10px] text-green-500 font-medium flex items-center gap-1">
                                                 <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span> En línea
                                             </p>
@@ -134,28 +155,28 @@
                                     </div>
                                 </div>
 
-                                <div class="flex-grow p-4 space-y-5 overflow-y-auto no-scrollbar bg-slate-50">
-                                    <div class="flex items-start gap-2.5">
+                                <div class="flex-grow p-3 md:p-4 space-y-4 overflow-y-auto no-scrollbar bg-slate-50">
+                                    <div class="flex items-start gap-2">
                                         <div class="w-6 h-6 rounded-full bg-blue-600 flex-shrink-0 mt-1 flex items-center justify-center text-white text-[10px] font-bold">C</div>
-                                        <div class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[85%]">
-                                            <p class="text-xs md:text-sm text-slate-700 leading-relaxed">¡Hola! Soy tu copiloto en ConectApp. ¿Cómo ha estado la tarde con Nico?</p>
+                                        <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[85%]">
+                                            <p class="text-[11px] md:text-xs text-slate-700 leading-relaxed">¡Hola! Soy tu copiloto en ConectApp. ¿Cómo ha estado la tarde con Nico?</p>
                                         </div>
                                     </div>
 
                                     <div class="flex items-end justify-end gap-2">
-                                        <div class="bg-blue-600 p-3.5 rounded-2xl rounded-br-none shadow-md shadow-blue-100 max-w-[85%]">
-                                            <p class="text-xs md:text-sm text-white leading-relaxed">Un poco difícil. Ha tenido problemas para transicionar de los juegos a la comida.</p>
+                                        <div class="bg-blue-600 p-3 rounded-2xl rounded-br-none shadow-md shadow-blue-100 max-w-[85%]">
+                                            <p class="text-[11px] md:text-xs text-white leading-relaxed">Un poco difícil. Ha tenido problemas para transicionar de los juegos a la comida.</p>
                                         </div>
                                     </div>
 
-                                    <div class="flex items-start gap-2.5">
+                                    <div class="flex items-start gap-2">
                                         <div class="w-6 h-6 rounded-full bg-blue-600 flex-shrink-0 mt-1 flex items-center justify-center text-white text-[10px] font-bold">C</div>
-                                        <div class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[85%]">
-                                            <p class="text-xs md:text-sm text-slate-700 leading-relaxed">Lo entiendo, las transiciones pueden ser un reto. Basado en su perfil, ¿te parece si probamos usar su interés por los trenes para "viajar" a la estación de la cocina?</p>
+                                        <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[85%]">
+                                            <p class="text-[11px] md:text-xs text-slate-700 leading-relaxed">Lo entiendo, las transiciones pueden ser un reto. Basado en su perfil, ¿te parece si probamos usar su interés por los trenes para "viajar" a la estación de la cocina?</p>
                                         </div>
                                     </div>
                                     
-                                    <div class="flex items-center gap-1 pl-9">
+                                    <div class="flex items-center gap-1 pl-8 md:pl-9">
                                         <div class="w-1.5 h-1.5 bg-slate-300 rounded-full animate-bounce"></div>
                                         <div class="w-1.5 h-1.5 bg-slate-300 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
                                         <div class="w-1.5 h-1.5 bg-slate-300 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
@@ -163,7 +184,7 @@
                                 </div>
 
                                 <div class="p-3 bg-white border-t border-slate-100">
-                                    <div class="h-10 bg-slate-100 rounded-full w-full flex items-center px-4 text-xs text-slate-400">
+                                    <div class="h-9 md:h-10 bg-slate-100 rounded-full w-full flex items-center px-4 text-[10px] md:text-xs text-slate-400">
                                         Escribe tu mensaje...
                                     </div>
                                 </div>
@@ -174,16 +195,18 @@
             </div>
         </section>
 
-        <section class="bg-slate-50 py-16">
-            <div class="container mx-auto px-6">
-                <div class="max-w-5xl mx-auto rounded-2xl shadow-2xl shadow-slate-200 overflow-hidden border border-slate-100 bg-black">
+        <section class="bg-slate-50 py-16 md:py-20">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="max-w-5xl mx-auto rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl shadow-slate-200 overflow-hidden border border-slate-100 bg-black">
                     <video 
                         class="w-full h-auto object-cover aspect-video" 
                         autoplay 
                         loop 
                         muted 
                         playsinline 
-                        poster="img/logo.png"> <source src="vid/conectapp-video.mp4" type="video/mp4">
+                        poster="img/logo.png"
+                        aria-label="Video demostrativo de la aplicación ConectApp">
+                        <source src="vid/conectapp-video.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                     </video>
                 </div>
@@ -191,94 +214,94 @@
         </section>
 
         <section class="bg-white">
-            <div class="container mx-auto px-6 py-20 text-center">
+            <div class="container mx-auto px-6 py-16 md:py-24 text-center">
                 <div class="max-w-4xl mx-auto">
-                    <svg class="w-12 h-12 text-blue-200 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.0547 15.3789 13.9219 17.0273 12.3906C18.6758 10.8594 20.3555 10.0156 20.3555 7.64062C20.3555 5.57812 18.9219 4.3125 17.1562 4.3125C15.3164 4.3125 13.7383 5.53906 13.293 7.375L10.7266 6.32812C11.2383 3.61328 13.7109 2 17.2188 2C20.5977 2 23.332 4.67188 23.332 7.76953C23.332 10.7422 21.3633 11.9492 19.3828 13.8945C17.9336 15.3164 17.0664 16.457 17.0664 18L17.0664 21L14.017 21ZM5.29297 21L5.29297 18C5.29297 16.0547 6.6543 13.9219 8.30273 12.3906C9.95117 10.8594 11.6309 10.0156 11.6309 7.64062C11.6309 5.57812 10.1973 4.3125 8.43164 4.3125C6.5918 4.3125 5.01367 5.53906 4.56836 7.375L2.00195 6.32812C2.51367 3.61328 4.98633 2 8.49414 2C11.873 2 14.6074 4.67188 14.6074 7.76953C14.6074 10.7422 12.6387 11.9492 10.6582 13.8945C9.20898 15.3164 8.3418 16.457 8.3418 18L8.3418 21L5.29297 21Z"></path></svg>
-                    <h2 class="text-2xl md:text-3xl font-medium text-slate-800 italic leading-relaxed">
+                    <svg class="w-10 h-10 md:w-12 md:h-12 text-blue-200 mx-auto mb-4 md:mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.0547 15.3789 13.9219 17.0273 12.3906C18.6758 10.8594 20.3555 10.0156 20.3555 7.64062C20.3555 5.57812 18.9219 4.3125 17.1562 4.3125C15.3164 4.3125 13.7383 5.53906 13.293 7.375L10.7266 6.32812C11.2383 3.61328 13.7109 2 17.2188 2C20.5977 2 23.332 4.67188 23.332 7.76953C23.332 10.7422 21.3633 11.9492 19.3828 13.8945C17.9336 15.3164 17.0664 16.457 17.0664 18L17.0664 21L14.017 21ZM5.29297 21L5.29297 18C5.29297 16.0547 6.6543 13.9219 8.30273 12.3906C9.95117 10.8594 11.6309 10.0156 11.6309 7.64062C11.6309 5.57812 10.1973 4.3125 8.43164 4.3125C6.5918 4.3125 5.01367 5.53906 4.56836 7.375L2.00195 6.32812C2.51367 3.61328 4.98633 2 8.49414 2C11.873 2 14.6074 4.67188 14.6074 7.76953C14.6074 10.7422 12.6387 11.9492 10.6582 13.8945C9.20898 15.3164 8.3418 16.457 8.3418 18L8.3418 21L5.29297 21Z"></path></svg>
+                    <h2 class="text-xl md:text-3xl font-medium text-slate-800 italic leading-relaxed">
                         "¿Te has despertado a las 4 AM sin saber cómo ayudar a tu hija o hijo? Ahí es cuando ConectApp está para acompañarte."
                     </h2>
                 </div>
             </div>
         </section>
 
-        <section id="como-funciona" class="bg-slate-50 py-20 md:py-28">
+        <section id="como-funciona" class="bg-slate-50 py-16 md:py-28">
             <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Un apoyo tan simple como usar tu celular</h2>
-                    <p class="text-lg text-slate-600">Tres pasos para tener un especialista en tu bolsillo.</p>
+                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                    <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-4">Un apoyo tan simple como usar tu celular</h2>
+                    <p class="text-base md:text-lg text-slate-600">Tres pasos para tener un especialista en tu bolsillo.</p>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow border border-slate-100 text-center group">
-                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">1</div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">Crea el Perfil</h3>
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow border border-slate-100 text-center group">
+                        <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6 text-xl md:text-2xl font-bold group-hover:scale-110 transition-transform">1</div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-2 md:mb-3">Crea el Perfil</h3>
                         <p class="text-slate-600 text-sm leading-relaxed">Completa un formulario seguro para que la IA conozca los gustos, desafíos y el diagnóstico de tu hijo/a.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow border border-slate-100 text-center group">
-                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">2</div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">Ingresa a la App</h3>
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow border border-slate-100 text-center group">
+                        <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6 text-xl md:text-2xl font-bold group-hover:scale-110 transition-transform">2</div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-2 md:mb-3">Ingresa a la App</h3>
                         <p class="text-slate-600 text-sm leading-relaxed">Accede a tu espacio privado desde cualquier dispositivo. Sin esperas, tu copiloto ya está listo.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow border border-slate-100 text-center group">
-                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">3</div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">Recibe Apoyo</h3>
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow border border-slate-100 text-center group">
+                        <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6 text-xl md:text-2xl font-bold group-hover:scale-110 transition-transform">3</div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-2 md:mb-3">Recibe Apoyo</h3>
                         <p class="text-slate-600 text-sm leading-relaxed">Obtén contención emocional y estrategias prácticas al instante, 100% personalizadas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="profesionales" class="bg-white py-20 md:py-28">
+        <section id="profesionales" class="bg-white py-16 md:py-28">
             <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div>
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <div class="text-center md:text-left">
                         <span class="text-blue-600 font-bold tracking-wider uppercase text-xs">Respaldo Profesional</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 mb-6">Contenido validado por especialistas en salud</h2>
-                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mt-3 md:mt-4 mb-4 md:mb-6">Contenido validado por especialistas en salud</h2>
+                        <p class="text-base md:text-lg text-slate-600 mb-6 leading-relaxed">
                             Las sugerencias de ConectApp se basan en protocolos diseñados por un equipo multidisciplinario. Te entregamos la tranquilidad de un consejo con base profesional, pero con la calidez que necesitas.
                         </p>
-                        <div class="bg-blue-50/50 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                            <p class="text-sm text-blue-800 font-medium">
+                        <div class="bg-blue-50/50 border-l-4 border-blue-500 p-4 rounded-r-lg text-left">
+                            <p class="text-xs md:text-sm text-blue-800 font-medium">
                                 ConectApp es una herramienta de acompañamiento y no reemplaza la terapia médica profesional.
                             </p>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <p class="font-semibold text-slate-700">Terapia Ocupacional</p>
+                    <div class="grid grid-cols-2 gap-3 md:gap-4">
+                        <div class="bg-slate-50 p-4 md:p-5 rounded-xl border border-slate-100 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <p class="font-semibold text-sm md:text-base text-slate-700">Terapia Ocupacional</p>
                         </div>
-                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <p class="font-semibold text-slate-700">Psicopedagogía</p>
+                        <div class="bg-slate-50 p-4 md:p-5 rounded-xl border border-slate-100 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <p class="font-semibold text-sm md:text-base text-slate-700">Psicopedagogía</p>
                         </div>
-                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <p class="font-semibold text-slate-700">Psicología</p>
+                        <div class="bg-slate-50 p-4 md:p-5 rounded-xl border border-slate-100 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <p class="font-semibold text-sm md:text-base text-slate-700">Psicología</p>
                         </div>
-                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 text-center shadow-sm hover:shadow-md transition-shadow">
-                            <p class="font-semibold text-slate-700">Neurología</p>
+                        <div class="bg-slate-50 p-4 md:p-5 rounded-xl border border-slate-100 text-center shadow-sm hover:shadow-md transition-shadow">
+                            <p class="font-semibold text-sm md:text-base text-slate-700">Neurología</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="precios" class="bg-slate-50 py-20 md:py-28">
+        <section id="precios" class="bg-slate-50 py-16 md:py-28">
             <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Inversión simple y transparente</h2>
-                    <p class="text-lg text-slate-600 mt-4">Sin contratos a largo plazo. Tu tranquilidad es lo primero.</p>
+                <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
+                    <h2 class="text-2xl md:text-4xl font-bold text-slate-900">Inversión simple y transparente</h2>
+                    <p class="text-base md:text-lg text-slate-600 mt-3 md:mt-4">Sin contratos a largo plazo. Tu tranquilidad es lo primero.</p>
                 </div>
                 
                 <div class="max-w-md mx-auto bg-white rounded-3xl shadow-2xl shadow-slate-200/50 border border-slate-100 overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
-                    <div class="p-10 text-center border-b border-slate-50">
-                        <h3 class="text-xl font-bold text-slate-900 uppercase tracking-wide">Membresía Mensual</h3>
-                        <div class="mt-6 flex justify-center items-baseline gap-1">
-                            <span class="text-5xl font-extrabold text-blue-600">USD $6</span>
+                    <div class="p-8 md:p-10 text-center border-b border-slate-50">
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 uppercase tracking-wide">Membresía Mensual</h3>
+                        <div class="mt-4 md:mt-6 flex justify-center items-baseline gap-1">
+                            <span class="text-4xl md:text-5xl font-extrabold text-blue-600">USD $6</span>
                             <span class="text-slate-400 font-medium">/mes</span>
                         </div>
-                        <p class="text-sm text-slate-400 mt-2">(Aprox. CLP $6.000)</p>
+                        <p class="text-xs md:text-sm text-slate-400 mt-2">(Aprox. CLP $6.000)</p>
                     </div>
-                    <div class="p-8 bg-white">
-                        <ul class="space-y-4 mb-8">
+                    <div class="p-6 md:p-8 bg-white">
+                        <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8 text-sm md:text-base">
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span class="text-slate-600"><strong>30 días de prueba gratuita</strong></span>
@@ -296,7 +319,7 @@
                                 <span class="text-slate-600">Cancela cuando quieras</span>
                             </li>
                         </ul>
-                        <a href="https://usuarios.conectapp.me/" class="block w-full bg-blue-600 text-white text-center font-bold py-4 rounded-xl shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl transition-all">
+                        <a href="https://usuarios.conectapp.me/" class="block w-full bg-blue-600 text-white text-center font-bold py-3.5 md:py-4 rounded-xl shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl transition-all">
                             Comenzar Prueba Gratis
                         </a>
                     </div>
@@ -306,14 +329,14 @@
 
     </main>
 
-    <footer class="bg-slate-900 text-white py-12">
+    <footer class="bg-slate-900 text-white py-10 md:py-12">
         <div class="container mx-auto px-6 text-center">
             <div class="flex items-center justify-center gap-3 mb-6">
-                <span class="text-2xl font-bold tracking-tight">ConectApp</span>
+                <span class="text-xl md:text-2xl font-bold tracking-tight">ConectApp</span>
             </div>
-            <p class="text-slate-400 max-w-md mx-auto mb-8">Tecnología y empatía unidas para acompañar a las familias neurodivergentes.</p>
+            <p class="text-slate-400 text-sm md:text-base max-w-md mx-auto mb-8">Tecnología y empatía unidas para acompañar a las familias neurodivergentes.</p>
             
-            <div class="flex justify-center gap-6 text-sm text-slate-400 mb-8">
+            <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-6 text-sm text-slate-400 mb-8">
                 <a href="#" class="hover:text-white transition-colors">Términos de Servicio</a>
                 <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
             </div>
